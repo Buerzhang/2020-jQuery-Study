@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="usename" id="usename" value="" /><br />
+		<input type="password" name="pwd" id="pwd" value="" /><br />
+		<input type="button" name="btn" id="btn" value="ok" />
+		<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+ </head>
+ <body>
+  <from id='myfrom'>
+   <fieldset>
+    <legend>注册页面</legend>
+    <label>用户名：</label>
+    <input type="text" disabled="disabled" /><br />
+    <label>密码：</label>
+    <input type="password" /><br />
+    <label>性别：</label>
+    <input type="radio" name="sex" />男
+    <input type="radio" name="sex" />女<br />
+    <label>兴趣爱好：</label>
+    <input type="checkbox" checked="checked" />打羽毛球
+    <input type="checkbox" />跳舞
+    <input type="checkbox" checked="checked" />说相声
+    <input type="checkbox" />跳舞<br />
+    <label>上传头像：</label>
+    <input type="file" /><br />
+    <label>所在城市：</label>
+    <select multiple="multiple">
+     <option>祖安</option>
+     <option selected="selected">意大利</option>
+     <option>陕西</option>
+     <option selected="selected">上海</option>
+    </select><br />
+    <label>备注</label>
+    <textarea></textarea><br />
+    <input type="reset" />
+    <input type="submit" />
+   </fieldset>
+  </from>
+  <div id="div1"></div>
+ </body>
+</html>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script>
+
+		console.log($('input').__proto__===Array.prototype);
+		
+		console.log('...我是分割线...')
+		
+		console.log($('input')[0].type);
+		console.log($('input')[1].type);
+		console.log($('input')[2].type);
+		console.log($('option')[3].value)
+		
+		$(function(){
+			var $input=$(":input")
+			var $text=$(':text');
+			$('#div1').append('有'+$input.length+'个（input元素）<br />')
+			$('#div1').append('有'+$text.length+'个（text元素）<br />')
+		})
+</script>

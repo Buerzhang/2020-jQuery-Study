@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .parentWrap {
+            width: 200px;
+            text-align: center;
+
+        }
+
+        .menuGroup {
+            border: 1px solid #999;
+            background-color: #e0ecff;
+        }
+
+        .groupTitle {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .menuGroup > div {
+            height: 200px;
+            background-color: #fff;
+            display: none;
+        }
+		</style>
+	</head>
+	<body>
+		<ul class="parentWrap">
+			<li	class="menuGroup">
+				<span class="groupTitle">图片1</span>
+				<div><img src="img/01.jpg"></div>
+			</li>
+			
+			<li	class="menuGroup">
+				<span class="groupTitle">图片2</span>
+				<div><img src="img/02.jpg"></div>
+			</li>
+			
+			<li	class="menuGroup">
+				<span class="groupTitle">图片3</span>
+				<div><img src="img/03.jpg"></div>
+			</li>
+			
+			<li	class="menuGroup">
+				<span class="groupTitle">图片4</span>
+				<div><img src="img/04.jpg"></div>
+			</li>
+			
+			<li	class="menuGroup">
+				<span class="groupTitle">图片5</span>
+				<div><img src="img/05.jpg"></div>
+			</li>
+			
+			<li	class="menuGroup">
+				<span class="groupTitle">图片6</span>
+				<div><img src="img/06.jpg"></div>
+			</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	$(function(){
+		$('ul').children('li').click(function(){
+			//jquery隐式迭代
+			//jQuery链式编程
+			$(this).children('div').slideDown(800).parent().siblings('li').children('div').slideUp(400);
+			//当前li标签的子div属性为显示，父级的其他兄弟li标签的子div属性设置为隐藏
+		});
+	});
+</script>

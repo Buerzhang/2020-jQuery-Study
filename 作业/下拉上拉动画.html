@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>滑入</button>
+		<button>滑出</button>
+		<button>切换</button>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		//		1.滑入单击事件
+		$('button').eq(0).click(function(){
+			$('div').eq(0).slideDown(500)
+		})
+		//		2.滑出单击事件
+		$('button').eq(1).click(function(){
+			$('div').eq(0).slideUp(500)
+		})
+		//		3.切换		切换动画状态
+		$('button').eq(2).click(function(){
+			$('div').eq(0).slideToggle(1000)
+		})
+	})
+</script>

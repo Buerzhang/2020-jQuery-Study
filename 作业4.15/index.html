@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器实现多个div的显示和隐藏</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				margin-top:10px ;
+			}
+			#div1{
+				height: 30px;
+				width: 100px;
+				background-color: burlywood;
+			}
+			#div2{
+				height: 30px;
+				width: 200px;
+				background-color: aquamarine;
+			}
+			#div3{
+				height: 30px;
+				width: 250px;
+				background-color:blueviolet;
+			}
+		
+		</style>
+		<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				time = setInterval("show()");
+			});
+			/* 显示函数 */
+			function show(){
+				$("#div1").show(4000,hide);
+				clearInterval(time);
+				time = setInterval("hide()",1000);	
+			}
+			/* 隐藏函数 */
+			function hide(){
+				$("#div1").hide(1000,show);
+				$("#div2").hide(2000,show);
+				$("#div3").hide(3000,show);	
+				$("#div2").show(4000,show);
+				$("#div3").show(5000,show);	
+				clearInterval(time);		
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">1</div>
+		<div id="div2">2</div>
+		<div id="div3">3</div>
+		
+	</body>
+</html>

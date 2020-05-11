@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	$(function(){
+		//设置奇数行为天蓝色
+		$('li:odd').css('background-color','skyblue');
+		//设置偶数行为粉红色
+		$('li:even').css('background-color','pink');
+		//首尾显示红色
+		$('li:eq(0)').css('background-color','red');
+		$('li:eq(9)').css('background-color','red');
+	});
+</script>

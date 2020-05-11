@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>html()</button>
+		<button>append()</button>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		$('button').eq(0).click(function(){
+			$('div').eq(0).html('<a href="https://www.baidu.com">我是HTML设置的百度</a><br />')
+		})
+		$('button').eq(1).click(function(){
+			$('div').eq(0).append('<a href="https://www.bilibili.com">我是Append设置的哔哩哔哩</a>')
+		})
+	})
+</script>

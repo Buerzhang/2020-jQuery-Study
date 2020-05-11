@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				text-align: center;
+			}
+			div{
+				margin: 0 auto;
+				
+				width: 60%;
+			}
+			table{
+				width: 100%;
+				height: 500px;
+			}
+			.t1{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<table>
+			<tr>
+				<td></td>
+				<td>会员注册</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="" id="usename" value="" /></td>
+				<td class="t1" id="u">用户名不可以为空</td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" name="" id="pwd" value="" /></td>
+				<td class="t1" id="p">密码不可以为空</td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>
+					<select name="">
+					<option value="">男</option>
+					<option value="">女</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>真实姓名：</td>
+				<td><input type="text" name="" id="name" value="" /></td>
+				<td  class="t1" id="y">用户名不可以为空</td>
+			</tr>
+			<tr>
+				<td>邮编：</td>
+				<td><input type="text" name="" id="youbian" value="" /></td>
+			</tr>
+			<tr>
+				<td>固定电话：</td>
+				<td><input type="text" name="tel" id="tel" value="" /></td>
+			</tr>
+			<tr>
+				<td>e-mail：</td>
+				<td><input type="text" name="mail" id="mail" value="" /></td>
+			</tr>
+			<tr>
+				<td>详细住址：</td>
+				<td><textarea></textarea></td>
+				<td class="t1" id="d">请输入准确地址</td>
+			</tr>
+			<td></td>
+			<td><button>确定</button><button>重置</button></td>
+		</table>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		console.log($('input'))
+		
+		var btn=document.getElementsByTagName('button');
+		//注册按钮
+		$(btn[0]).click(function(){
+			
+			if($('input')[0].value==''){
+				$('#u').css('color','red')
+			}
+			else if($('input')[1].value==''){
+				$('#p').css('color','red')
+			}			
+			else if($('input')[3].value==''){
+				$('#y').css('color','red')
+			}
+			else if($('textarea')[0].value==''){
+				$('#d').css('color','red')
+			}
+			else{
+				var sex;
+//				if($('select')[0].options.selectedIndex==0){
+//					sex='男'
+//				}
+//				if($('select')[0].options.selectedIndex==1){
+//					sex='女'
+//				}
+
+				var usename=$('input')[0].value;
+				var name=$('input')[2].value;
+				var youbian=$('input')[3].value;
+				var tel=$('input')[4].value;
+				var mail=$('input')[5].value;
+				var dizhi=$('textarea')[0].value;
+				document.write('请核对您的信息：'
+				+'<br />用户名：'+usename
+				+'<br />性别：'+sex
+				+'<br />真实姓名：'+name
+				+'<br />邮编：'+youbian
+				+'<br />电话：'+tel
+				+'<br />电子邮箱：'+mail
+				+'<br />地址：'+dizhi)
+			}
+		})
+		//重置按钮
+		$(btn[1]).click(function(){
+			$('.t1').css('color','white');
+			$('input').val('');
+			$('textarea').val('')
+			
+		});
+	});
+</script>

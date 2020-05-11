@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+			height:100px;
+			margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="设置边框" />
+		<input type="button" name="" id="btn2" value="设置文本" />
+		<input type="button" name="" id="btnReset" value="重置" />
+		<div></div>
+		<div></div>
+		<div></div>
+		<p>jQuery优势</p>
+		<p>1.可以写多个入口函数$(function(){});</p>
+		<p>2.API容易记忆</p>
+		<p>3.代码简洁（隐式迭代）</p>
+		<p>4.解决浏览器兼容</p>
+		<p>容错率高，前面出现了问题，后面可以继续执行</p>
+	</body>
+</html>
+<!--链接jquery库-->
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	//入口函数
+	$(document).ready(function(){
+		//设置边框
+		$('#btn1').click(function(){
+			$('div').css('border','5px solid red');
+		});
+		//设置文本
+		$('#btn2').click(function(){
+			$('div').text('hello world!');
+		});
+		//重置
+		$('#btnReset').click(function(){
+			$('div').css('border','none');
+			$('div').text('');
+		});
+	});
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				line-height: 70px;
+				font-size: 40px;
+			}
+			li{
+				list-style: none;
+				height: 14%;
+			}
+			table{
+				width: 700px;
+				height: 500px;
+			}
+			
+			#left{
+				width:200px;
+			}
+			#right>div{
+				width: 500px;
+				height: 500px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<table border="" cellspacing="" cellpadding="">
+				<tr>
+					<td id="left">
+						<li>红</li>
+						<li>橙</li>
+						<li>黄</li>
+						<li>绿</li>
+						<li>青</li>
+						<li>蓝</li>
+						<li>紫</li>
+					</td>
+					<td id="right">
+						<div style="background-color: red;"></div>
+						<div style="background-color: orange;"></div>
+						<div style="background-color: yellow;"></div>
+						<div style="background-color: green;"></div>
+						<div style="background-color: lightblue;"></div>
+						<div style="background-color: blue;"></div>
+						<div style="background-color: purple;"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script>
+$(function(){
+	//1.鼠标移入事件
+	$('#left').children('li').mouseenter(function(){
+		var i=$(this).index();
+		//console.log(i)
+		$('#right').children('div').eq(i).show().siblings('div').hide()
+	})
+})
+</script>

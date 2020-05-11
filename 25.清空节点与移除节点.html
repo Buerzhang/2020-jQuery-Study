@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>标题</title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li>我是第5个li标签</li>
+</ul>
+</body>
+</html>
+<script src="jquery-1.12.4.js"></script>
+<script>
+  //清空元素: empty();
+  //移除节点: remove();
+$(function(){
+	//1.清空元素empty()
+//	$('#btn').click(function(){
+//		//$('ul').html('')  //不安全，有可能造成内存泄露，不推荐使用
+//		$('ul').empty()
+//	})
+	//2.移除元素：remove()
+//	$('#btn').click(function(){
+//		$('#li3').remove()
+//	})
+	//3.坑爹
+	$('#btn').click(function(){
+			$('#li3').parent().remove()
+	})
+})
+</script>

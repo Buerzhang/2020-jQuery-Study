@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				height: 100px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="设置边框" />
+		<input type="button" name="" id="btn2" value="设置文字" />
+		<input type="button" name="" id="btnReset" value="重置" />
+		<div></div>
+		<div></div>
+		<div></div>
+		<p>原生JavaScript的缺点：</p>
+		<p>1.不能添加多个入口函数(window.onload=function());</p>
+		<p>2.API名字太长难记;</p>
+		<p>3.有时候代码冗余(代码重复);</p>
+		<p>4.个别新属性和方法有浏览器兼容问题（尤其是某E浏览器）;</p>
+		<p>5.容错率比较低,前面出现问题,后面无法执行;</p>
+	</body>
+</html>
+
+<script>
+	//入口函数
+	window.onload=function(){
+		//1.获取对应元素
+		var btnOne=document.getElementById("btn1");
+		var btntwo=document.getElementById("btn2");
+		var divs=document.getElementsByTagName("div");
+		//2.设置单击事件
+		btnOne.onclick=function(){
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.border='5px solid green';
+			}
+		}
+		
+		btntwo.onclick=function(){
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].textContent='hello world！';
+			}
+		}
+		btnReset.onclick=function(){
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.border='none';
+				divs[i].textContent='';
+				divs[i].style.backgroundColor='white'
+				
+			}
+		}
+	}
+	
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<p>请输你的姓名：</p>
+			<input type="text" name="" id="name" value="" />
+			<button>确认</button>
+			<button>重置</button>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		var btn=document.getElementsByTagName('button');
+		//确认
+		$(btn[0]).click(function(){
+			alert('你的输入的是：'+$('input')[0].value);
+		});
+		//重置
+		$(btn[1]).click(function(){
+			confirm('确定要重置吗')
+			$('input')[0].value='';
+		});
+	});
+</script>

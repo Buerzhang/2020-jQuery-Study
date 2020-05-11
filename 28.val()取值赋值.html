@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>获取</button>
+		<button>设置</button>
+		<input type="text" name="" id="text" value="请输入账号" />
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script type="text/javascript">
+	//通过val()取值
+	//get
+	var $t=$('#text')
+	$('button').eq(0).click(function(){
+		
+		console.log($t.val())
+	})
+	//set
+	$('button').eq(1).click(function(){
+		$t.val('hello')
+	})
+</script>

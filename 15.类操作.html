@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.back{
+				background-color: black;
+			}
+			.color{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<button>添加类</button>
+		<button>移除类</button>
+		<button>判断类</button>
+		<button>切换类</button>
+		<h1>Hello World</h1>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	//添加类
+	$('button').eq(0).click(function(){
+		$('body').addClass('back color');//添加多个类用空格隔开
+	})
+	//移除类
+	$('button').eq(1).click(function(){
+		$('body').removeClass('back color')
+	})
+	//判断类
+	$('button').eq(2).click(function(){
+		var has=$('body').hasClass('back color');//返回值为true和false
+		if(has==false){
+			alert('没有添加这个类')
+		}
+		if(has==true){
+			alert('已添加这个类')
+		}
+	})
+	//切换类
+	$('button').eq(3).click(function(){
+		$('body').toggleClass('back color')
+	})
+</script>

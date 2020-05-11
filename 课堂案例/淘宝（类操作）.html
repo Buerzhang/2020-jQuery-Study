@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*样式*/
+			*{
+				margin: 0 auto;
+				padding: 0;
+				text-align: center;
+				line-height: 70px;
+				font-size: 40px;
+			}
+			li{
+				list-style: none;
+				height: 14%;
+			}
+			table{
+				width: 700px;
+				height: 500px;
+			}
+			
+			#left{
+				width:200px;
+			}
+			#right>div{
+				width: 500px;
+				height: 500px;
+				display: none;
+			}
+			
+			
+			/*类样式*/
+			.red{
+				background-color: red;
+			}
+			.orange{
+				background-color: orange;
+			}
+			.yellow{
+				background-color: yellow;
+			}
+			.green{
+				background-color: green;
+			}
+			.lightblue{
+				background-color: lightblue;
+			}
+			.blue{
+				background-color: blue;
+			}
+			.purple{
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<table border="" cellspacing="" cellpadding="">
+				<tr>
+					<td id="left">
+						<li>红</li>
+						<li>橙</li>
+						<li>黄</li>
+						<li>绿</li>
+						<li>青</li>
+						<li>蓝</li>
+						<li>紫</li>
+					</td>
+					<td id="right">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		$('#left').find('li').mouseenter(function(){
+			//设置鼠标移入事件
+			var i=$(this).index();
+			if(i==0){
+				$('li').eq(i).addClass('red').siblings('li').removeClass();
+				$('#right>div').eq(i).show().addClass('red').siblings('div').hide();
+			}
+			if(i==1){
+				$('li').eq(i).addClass('orange').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('orange').show().siblings('div').hide();
+			}
+			if(i==2){
+				$('li').eq(i).addClass('yellow').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('yellow').show().siblings('div').hide();
+			}
+			if(i==3){
+				$('li').eq(i).addClass('green').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('green').show().siblings('div').hide();
+			}
+			if(i==4){
+				$('li').eq(i).addClass('lightblue').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('lightblue').show().siblings('div').hide();
+			}
+			if(i==5){
+				$('li').eq(i).addClass('blue').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('blue').show().siblings('div').hide();
+			}
+			if(i==6){
+				$('li').eq(i).addClass('purple').siblings('li').removeClass();
+				$('#right>div').eq(i).addClass('purple').show().siblings('div').hide();
+			}
+			
+			$('table').mouseleave(function(){
+				$('*').removeClass()
+			})
+		})
+	})
+</script>

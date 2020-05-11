@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			table{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<table border="1px">
+			<tr class="tr1">
+				<td>111</td>
+				<td>111</td>
+				<td>111</td>
+				<td>111</td>
+				<td><a href="#">修改</a>    <a href="#">删除</a></td>
+				
+			</tr>
+			<tr class="tr2">
+				<td>222</td>
+				<td>222</td>
+				<td>222</td>
+				<td>222</td>
+				<td>222</td>
+			</tr>
+			<tr class="tr1">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+			<tr class="tr2">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+			<tr class="tr1">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+			<tr class="tr2">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+			<tr class="tr1">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+			<tr class="tr2">
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+				<td>333</td>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		var a=document.getElementsByTagName('a');
+		//console.log(a)
+		//修改
+		$(a[0]).click(function(){
+			$('.tr1').css('background-color','pink');
+			$('.tr2').css('background-color','purple');
+		});
+		//删除
+		$(a[1]).click(function(){
+			$('.tr1').css('background-color','white');
+			$('.tr2').css('background-color','white');
+		});
+	});
+</script>

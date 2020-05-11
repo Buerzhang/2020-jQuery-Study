@@ -1,0 +1,377 @@
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+
+<style type="text/css">
+*{margin: 0; padding: 0;}
+body{ font-size: 20px; }
+li{ list-style: none;}
+ul.nav li{ width: 300px; text-align:center;}
+ul.nav > li{ float: left; margin-right:0px;}
+ul.nav li h3{height: 40px; line-height: 40px;}
+ul.nav > li > h3{ background: #72a7ff;}
+ul.nav > li > ul > li h3{ background: #ffd9d9;}
+ul.nav > li h3:hover,.choice{ background: #ffc0c0!important;}
+ul > li > ul{ display: none;}
+ul > li.on > ul{ display: block;}
+ul.nav li{ position: relative;}
+ul.nav > li > ul > li ul{ position:  absolute; top: 0; right: -300px;}
+ul.nav span.sub{ position: absolute; display: block; right:10px; top: 0; width: 10px; height: 40px; background: url(images/arrows.png) no-repeat center center;}
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("ul.nav li").hover(function(){
+            $(this).addClass("on");
+
+        },
+        function(){
+            $(this).removeClass("on");
+
+        })
+    });
+
+    $(document).ready(function() {
+        $("ul.nav li").hover(function(){
+            $(this).parent("ul").siblings("h3").addClass("choice");
+
+        },
+        function(){
+            $(this).parent("ul").siblings("h3").removeClass("choice");
+        })
+    });
+
+    $(document).ready(function() {       
+            if ($("ul.nav li").find("ul") .html()!="") {
+                $("ul.nav li").parent("ul").siblings("h3").append("<span class='sub'></span>");                
+            }
+    });
+</script>
+
+
+</head>
+<body>
+<ul class="nav">
+  <li><h3>一组成员</h3>
+    <ul>
+        <li><h3>杜开开</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">学委</div>
+            <li><h3>第一次作业</h3>
+            <li><h3>第二次作业</h3></li>
+            <li><h3>第三次作业</h3></li>
+            <li><h3>第四次作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>袁慧敏</h3>
+          <ul>
+            <li><h3>第一次作业</h3></li>
+            <li><h3>第二次作业</h3></li>
+            <li><h3>第三次作业</h3></li>
+            <li><h3>第四次作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王勇琴</h3>
+          <ul>
+            <li><h3>第一次作业</h3></li>
+            <li><h3>第二次作业</h3></li>
+            <li><h3>第三次作业</h3></li>
+            <li><h3>第四次作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>翟奕奕</h3>
+          <ul>
+          	<div style=" background-color: purple;color: yellow; font-size: 30px;">文艺委员</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>刘凯柱</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">班长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王明明</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">卫生委员</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>许阿敏</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+  
+  <li><h3>二组成员</h3>
+    <ul>
+        <li><h3>张旭扬</h3>
+          <ul>
+          	<div style=" background-color: green;color: yellow; font-size: 30px;">组长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>张庆辉</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>李奇</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>郭诗曼</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王羚</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>朱丽娜</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>成光荣</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+  
+  <li><h3>三组成员</h3>
+    <ul>
+        <li><h3>王小娜</h3>
+          <ul>
+          	<div style=" background-color: green;color: yellow; font-size: 30px;">组长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>刘思婕</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">书记</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>张莹</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王娇</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>史欣可</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">副班长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王晓敏</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王鑫</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">体育委员</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+  
+<li><h3>四组成员</h3>
+    <ul>
+        <li><h3>钱龙</h3>
+          <ul>
+          	<div style=" background-color: green;color: yellow; font-size: 30px;">组长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>李瑞萱</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>谈雪</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>封瑞林</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>陈秀强</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>赵敏雪</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>潘喜迎</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+  
+  <li><h3>五组成员</h3>
+    <ul>
+        <li><h3>张艳</h3>
+          <ul>
+          	<div style=" background-color: green;color: yellow; font-size: 30px;">组长</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>王晓鸽</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>张淑云</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>邹美玲</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>刘欣蕾</h3>
+          <ul>
+          	<div style=" background-color: red;color: yellow; font-size: 30px;">学委</div>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>杨怡曼</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+        <li><h3>周琼</h3>
+          <ul>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+            <li><h3>作业</h3></li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+</html>

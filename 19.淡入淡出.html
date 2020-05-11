@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: skyblue;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button>淡入</button>
+		<button>淡出</button>
+		<button>切换</button>
+		<br><input type="text" name="" id="" value="" />
+		<button>淡入程度(0~1)</button>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+$(function(){
+	//		1.淡入
+	$('button').eq(0).click(function(){
+		$('div').eq(0).fadeIn(2000);
+	})
+	//		2.淡出
+	$('button').eq(1).click(function(){
+		$('div').eq(0).fadeOut(800);
+	})
+	//		3.切换
+	$('button').eq(2).click(function(){
+		$('div').eq(0).fadeToggle(1000)
+	})
+	//		4.淡入程度
+	$('button').eq(3).click(function(){
+		var a=$('input').eq(0).val()
+		$('div').fadeTo(1000,a)
+	})
+})
+</script>

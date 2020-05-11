@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto 0;
+            padding-left: 10px;
+            background-image: url(images/bg.jpg);
+        }
+
+        .wrap li{
+            background-image: url(images/libg.jpg);
+        }
+
+        .wrap > ul > li {
+            float: left;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .wrap a {
+            display: block;
+            height: 30px;
+            width: 100px;
+            text-decoration: none;
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .wrap li ul {
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+    <ul>
+        <li>
+            <a href="javascript:void(0);">一级菜单1</a>
+            <ul>
+                <li><a href="javascript:void(0);">二级菜单1</a></li>
+                <li><a href="javascript:void(0);">二级菜单2</a></li>
+                <li><a href="javascript:void(0);">二级菜单3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);">一级菜单1</a>
+            <ul>
+                <li><a href="javascript:void(0);">二级菜单1</a></li>
+                <li><a href="javascript:void(0);">二级菜单2</a></li>
+                <li><a href="javascript:void(0);">二级菜单3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);">一级菜单1</a>
+            <ul>
+                <li><a href="javascript:void(0);">二级菜单1</a></li>
+                <li><a href="javascript:void(0);">二级菜单2</a></li>
+                <li><a href="javascript:void(0);">二级菜单3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	$(function(){
+		//一级菜单鼠标移入显示二级菜单   this是一个dom对象
+		$('.wrap>ul>li').mouseenter(function(){//为了节约资源，请使用mouseenter而不是mouseover
+			$(this).children('ul').show();//css('display','block')
+		});
+		//一级菜单鼠标移出隐藏二级菜单
+		$('.wrap>ul>li').mouseleave(function(){//为了节约资源，请使用mouseleave而不是mouseout
+			$(this).children('ul').hide();//css('display','none')
+		});
+	});
+</script>

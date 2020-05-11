@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: green;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>点击按钮切换动画</h1>
+		<button>显示</button>
+		<button>隐藏</button>
+		<button>切换</button>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	$(function(){
+	//参数1：执行时长 单位毫秒或者字符串：fast/normal/slow
+	//参数2：回调函数
+	//1.显示 show()
+		$('button').eq(0).click(function(){
+		//1.1直接显示s
+			//$('div').show()
+		//1.2动画显示
+			//毫秒
+			//$('div').show(2000)
+			//字符串
+			//$('div').show('fast')
+			//$('div').show('normal')
+			//$('div').show('slow')
+		//1.3回调函数
+			$('div').show(2000,function(){
+				$('h1').text('动画加载完毕！').hide(2000)
+			})
+		})
+	//2.隐藏 hide()
+		$('button').eq(1).click(function(){
+		//回调函数
+			$('div').hide(2000,function(){
+				$('h1').text('动画隐藏完毕！').show(1000).hide(2000)
+			})
+		})
+	//切换 
+		$('button').eq(2).click(function(){
+		//回调函数
+			$('div').toggle(1000,function(){
+				var active=($('div').css('display'))
+				if(active=='block'){
+					$('h1').text('切换成功！当前为：显示').show(1000).hide(2000)
+				}
+				if(active=='none'){
+					$('h1').text('切换成功！当前为：隐藏').show(1000).hide(2000)
+				}
+			})
+		})
+	})
+</script>

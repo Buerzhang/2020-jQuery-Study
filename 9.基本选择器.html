@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0 auto;
+				text-align: center;
+				font-size: 20px;
+			}
+
+			#caozuo{
+				width: 100%;
+			}
+			
+			#dulituan{
+				width: 100%;
+			}
+			#sanwuba{
+				width: 100%;
+			}
+			table{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="caozuo">
+		<button>司令官发表讲话</button>
+		<button>团长发表讲话</button>
+		<button>士兵上前线</button>
+		<button>找出军队没战斗力的人员</button>
+		<button>找出军队里的内奸</button>
+		<button>找出老百姓有战斗力的人员</button>
+		<button>找出老百姓里的内奸</button>
+		<button>重新开始</button>
+		</div>
+		
+		<div>
+			<table border="" cellspacing="" cellpadding="">
+				<tr><th colspan="2" id="slg">国共联合司令官</th></tr>
+				<tr>
+					<td><div id="dulituan" class="junren";>
+						<table border="" cellspacing="" cellpadding="">
+				<tr>
+					<th colspan="4" class="tz">独立团团长李云龙</th>
+				</tr>
+				<tr>
+					<td>狙击手</td>
+					<td>士兵</td>
+					<td class="wsy">卫生员</td>
+					<td class="hf">伙夫</td>
+					
+				</tr>
+				<tr>
+					<td class="hf">卫生员</td>
+					<td>士兵</td>
+					<td class="nj">士兵</td>
+					<td>士兵</td>
+				</tr>
+			</table>
+			</div></td>
+					<td>
+					<div id="sanwuba" class="junren">
+			<table border="" cellspacing="" cellpadding="">
+				<tr>
+					<th colspan="4" class="tz">358团团长楚云飞</th>
+				</tr>
+				<tr>
+					<td>狙击手</td>
+					<td class="hf">伙夫</td>
+					<td class="wsy">卫生员</td>
+					<td>士兵</td>
+				</tr>
+				<tr>
+					<td>士兵</td>
+					<td>士兵</td>
+					<td class="wsy">卫生员</td>
+					<td>士兵</td>
+				</tr>
+			</table>
+			</div>
+					</td>
+				</tr>
+				<table border="" cellspacing="" cellpadding="">
+					<tr>
+						<th colspan="8">村长</th>
+					</tr>
+					<tr>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="nj">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+					</tr>
+					<tr>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+					</tr>
+					<tr>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+					</tr>
+					<tr>
+						<td><font class="nj">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+					</tr>
+					<tr>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+					</tr>
+					<tr>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font>老百姓</font></td>
+						<td><font class="jsxh">老百姓</font></td>
+						<td><font class="nj">老百姓</font></td>
+						<td><font>老百姓</font></td>
+					</tr>
+				</table>
+			</table>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+//		id选择器		$('#id')
+//		class选择器	$('.name')
+//		标签选择器		$('标签名')
+//		并集选择器		$('.box1,.box2')
+//		交集选择器		$('li.ul')
+
+		var btn=document.getElementsByTagName('button');
+		//司令官发表讲话	id选择器
+		$(btn[0]).click(function(){
+			$('#slg').css({
+				'background-color':'red',
+				'color':'yellow'
+			})
+		})
+		//团长发表讲话	class选择器
+		$(btn[1]).click(function(){
+			$('.tz').css({
+				'background-color':'red',
+				'color':'white'
+			})
+		})
+		//士兵上前线	
+		$(btn[2]).click(function(){
+			$('.junren').css({
+				'background-color':'darkgreen',
+				'color':'red'
+			})
+		})
+		//找出没有战斗力的人员 	并集选择器	
+		$(btn[3]).click(function(){
+			$('.hf,.wsy').css({
+				'background':'white',
+				'color':'black'
+			});
+		})
+		//找出军队里的内奸	交集选择器	
+		$(btn[4]).click(function(){
+			$('td.nj').css('background-color','yellow')
+		})
+		//老百姓里有战斗力的人员
+		$(btn[5]).click(function(){
+			$('font.jsxh').css({
+				'background-color':'darkgreen',
+				'color':'red'
+			})
+		})
+		//找出老百姓里的内奸	交集选择器	
+		$(btn[6]).click(function(){
+			$('font.nj').css({
+				'background-color':'yellow',
+				'color':'red'
+			})
+		})
+
+		//重新开始
+		$(btn[7]).click(function(){
+			$('#slg,.tz,.junren,.hf,.wsy,td.nj,font.jsxh,font.nj').css({
+				'background-color':'white',
+				'color':'black'
+			
+		})
+
+		})
+	});
+	
+	
+	
+</script>

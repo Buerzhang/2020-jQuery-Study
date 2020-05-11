@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            width: 200px;
+            background-color: teal;
+            height: 200px;
+            font-size: 20px;
+        }
+
+        .btn-box {
+            width: 70px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+<body>
+<h1>商品选择：</h1>
+<select id="src-city" name="src-city" multiple>
+    <option value="1">iPad mini 5</option>
+    <option value="2">iPad 2019</option>
+    <option value="3">iPad Air 3</option>
+    <option value="4">iPad Pro 11</option>
+	<option value="5">iPad Pro 12.9</option>
+</select>
+<div class="btn-box">
+    <!--实体字符-->
+    <button id="btn-sel-all"> 全部添加 </button>
+    <button id="btn-sel-none"> 全部删除 </button>
+    <button id="btn-sel"> 添加</button>
+    <button id="btn-back"> 删除 </button>
+</div>
+<select id="tar-city" name="tar-city" multiple>
+</select>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+$(function(){
+	//1.全部移动到右边
+	$('#btn-sel-all').click(function(){
+		//找到左边select下的所有option，并且移动到右边的select里
+			$('#src-city>option').appendTo($('#tar-city'))		
+	})
+	//2。全部移动到左边
+	$('#btn-sel-none').click(function(){
+		$('#tar-city>option').appendTo($('#src-city'))
+	})
+	//3.选中的移动到右边
+	$('#btn-sel').click(function(){
+		//找到左边select下被选中的option项，添加到右边的select下
+		$('#src-city>option:selected').appendTo($('#tar-city'))		
+	})
+	//4.选中的移动到左边
+	$('#btn-back').click(function(){
+		//找到右边边select下被选中的option项，添加到左边边的select下
+		$('#tar-city>option:selected').appendTo($('#src-city'))
+	})
+})
+</script>

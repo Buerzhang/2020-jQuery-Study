@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0 auto;
+				font-size: 24px;
+				text-align: center;
+				line-height: 100px;
+			}
+			input{
+				float: left; height: 10%;
+			}
+		</style>
+	</head>
+	<body>
+		
+			<table>
+				<tr>
+					<td>
+						<h1>请输入要创建dom的数量</h1>
+						<input type="text" name="num" id="num" value="" / >
+						<input type="button" name="" id="new1" value="创建" / >
+						<input type="button" name="" id="new2" value="这是一个button" / >
+						<input type="button" name="" id="res" value="重置" / >
+					</td>
+				</tr>
+			</table>
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/jquery-1.12.4.js" ></script>
+<script>
+	(function(){
+		new1.onclick=function(){
+			var num=document.getElementById("num").value;
+				for (var i = 0; i <num; i++) {
+					var div=document.createElement('div');
+					div.innerHTML='你好！世界！';
+					div.style.backgroundColor='black';
+					div.style.color='green';
+					div.style.width='10%';
+					div.style.height='100px';
+					div.style.float='left';
+					document.body.appendChild(div);
+					}
+		}	
+
+	}());
+	
+	$(function(){
+		$('#new2').click(function(){
+			$('div').text('入侵成功!');
+			$('div').css({
+				'background-color':'black',
+				'width':'10%',
+				'height':'100px',
+				'float':'left',
+				'color':'red'
+			})
+		});
+		$('#res').click(function(){
+			$("div").remove();
+		});
+	});
+</script>

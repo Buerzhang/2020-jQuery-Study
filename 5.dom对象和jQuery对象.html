@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<div id="one"></div>
+		<div></div>
+		<div></div>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+	//1.DOM对象
+	//原生JavaScript获取到的对象
+	//只能调用DOM的方法和属性，不能调用jQuery的属性
+	
+	//三种获取dom属性的方式
+	document.getElementsByClassName('');
+	document.getElementById("");
+	document.getElementsByTagName('');
+	
+	var divone=document.getElementById("one");
+	divone.style.backgroundColor='red';
+	//divone.css('backgroundColor','green');//divone.css is not a function,因为DOM不能调用jquery方法
+	
+	
+	//2.jQuery对象
+	//利用jQuery选择器获取到的对象
+	//只能调用jQuery的方法和属性，不能使用原生JavaScript DOM的方法和属性
+	
+//	var $divone=$('#one');
+//	$divone.css('background-color','green');
+	//$divone.style.backgroundColor='red';//jquery不能调用DOM的方法和属性
+	
+	
+	//3.什么是jQuery对象  
+	//DOM对象的包装集
+//		var	divone=document.getElementById("one");
+//		console.log(divone)
+		
+//		var $divone=$('#one');
+//		console.log($divone);
+
+	//	//jQuery对象是一个数组吗？
+	//	console.log($divone.__proto__===Array.prototype);//false  不是一个真正的数组   伪数组
+	//	
+	//	var $divs=$('div');
+	//	console.log($divs);
+
+		//4.DOM对象转jquery对象
+//		console.log('dom对象...分割线')
+//		
+//		var divone =document.getElementById("one");
+//		console.log(divone)
+//		
+//		console.log('jquery对象...分割线.....')
+//		
+//		var $divone=$(divone);
+//		console.log($divone)
+	
+	//5.jQuery对象转DOM对象
+	//5.1使用下标获取
+	console.log('jquery对象...分割线...')
+	var $divs=$('div');
+//	console.log($divs);
+//	
+//	console.log('dom对象...分割线')
+//	var divone=$divs[0];
+//	console.log(divone);
+	
+	//5.2 使用jQuery的get()方法
+	var divtwo=$divs.get(1);
+	console.log(divtwo);
+	});
+</script>

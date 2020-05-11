@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0 auto;
+				padding: 0;
+			}
+			table{
+				width: 100%;
+				text-align: center;
+			}
+			div{
+				height: 500px;
+				display: none;
+			}
+			
+			.boder{
+				border-top: 4px red solid;
+			}
+			.color{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="">
+			<tr id="tab">
+				<td>demo01</td>
+				<td>demo02</td>
+				<td>demo03</td>
+				<td>demo04</td>
+			</tr>
+			<tr>
+				<td colspan="4" id="main">
+					<div style="background-color: red;" class="color"></div>
+					<div style="background-color: orange;"></div>
+					<div style="background-color: yellow;"></div>
+					<div style="background-color: green;"></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+<script>
+	$('#tab>td').mouseenter(function(){
+		//当前td添加boder类,移除其他兄弟td的boder类
+		$(this).addClass('boder').siblings().removeClass('boder');
+		//获取当前td的下标index()
+		var idx=$(this).index();
+		$('#main>div').eq(idx).show(1000).siblings().stop(true,true).hide(1000)
+		//查找对应下标的div，添加color类，改变当前的display属性block，其他兄弟的display属性为none
+		//$('#main>div').eq(idx).addClass('color').siblings().removeClass('color');
+	})
+</script>

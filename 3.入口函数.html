@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	//1.入口函数两种写法
+//	//1.1
+//	$(document).ready(function(){
+//		
+//	});
+//	//1.2
+//	$(function(){
+//		
+//	});
+
+	//2.和window.onload区别
+	//2.1 jQuery支持多个
+	$(function(){
+		console.log('我是一个入口函数');
+	});
+	
+	$(function(){
+		console.log('我是又是一个入口函数');
+	});
+	//2.2 执行时机不同 jQuery先执行
+	window.onload=function(){
+		alert('我是window.onload')
+	}
+	$(function(){
+		alert('我是$(function()')
+	})
+</script>

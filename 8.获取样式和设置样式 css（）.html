@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				height: 200px;
+				background-color: pink;
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="getBtn" value="获取" />
+		<input type="button" name="" id="setBtn" value="设置" />
+		<div id="div1" style="width: 200px;"></div>
+		<div id="div2" style="width: 300px;"></div>
+		<div id="div3" style="width: 400px;"></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		//1.获取css样式
+		$('#getBtn').click(function(){
+			//1.1 通过id获取标签的css样式
+			console.log($('#div1').css('width'));
+			console.log($('#div1').css('height'));
+			console.log($('#div1').css('background-color'));
+			console.log($('#div1').css('border'));
+			//1.2 通过标签名获取标签的css样式
+			//包含了多个DOM元素的jQuery对象样式，只能获取到第一个dom对象的样式
+			 //console.log($('div').css('width'));//只会获取到匹配第一个标签的值
+		});
+		
+		//2.设置样式
+		//设置的样式是行内样式
+		$('#setBtn').click(function(){
+//			//2.1通过id设置标签的css样式
+//			//设置单样式
+//			$('#div1').css('width','300px');
+//			$('#div1').css('width','300px');
+//			$('#div1').css('background-color','red');
+//			$('#div1').css('border','10px solid green');
+//			
+//			//设置多样式
+//			$('#div2').css({
+//				width:300,
+//				height:300,
+//				backgroundColor:'pink',
+//				border:'10px solid red ',
+//			})
+			
+			//2.2 通过标签名设置css样式
+			$('div').css({
+				width:300,
+				height:300,
+				backgroundColor:'pink',
+				border:'10px solid skyblue ',
+				margin:10,
+				'float':'left'
+			})
+		});
+			
+	});
+</script>

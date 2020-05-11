@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<button>开灯</button>
+		<button>关灯</button>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		//获取按钮
+		var btn=document.getElementsByTagName('button');
+		//关灯  jQuery选择器
+		btn[1].onclick=function(){
+			$('body').css('background-color','black');
+		}
+		//开灯
+		$(btn[0]).click(function(){
+			$('body')[0].style.backgroundColor='white';
+		})
+	});
+</script>

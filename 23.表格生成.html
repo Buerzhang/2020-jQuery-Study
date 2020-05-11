@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+
+</head>
+
+<body>
+<!--<input type="button" value="获取数据" id="j_btnGetData" />-->
+<button>获取数据</button>
+<table>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>电话</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+<script>
+  $(function () {
+    //模拟从后端拿到的数据
+    var data = [{
+      name: "中国移动",
+      sex: "男",
+      tel: "10086"
+    }, {
+      name: "中国联通",
+      sex: "女",
+      tel: "10010"
+    }, {
+      name: "中国电信",
+      sex: "男",
+      tel: "10000"
+    },{
+    	name:'张旭扬',
+    	sex:'男',
+    	tel:'17629027640'
+    }];
+
+    //给获取数据按钮设置一个点击事件.
+    $('button').eq(0).click(function () {
+    	
+      //1.html();
+      //设置内容,内容中有标签会解析; 会覆盖原来的内容.
+//     var list = [];
+//     for(var i = 0 ; i < data.length; i++){
+//     	//生成tr.
+//       list.push("<tr>");
+//       //生成td
+//       for(var key in data[i]){
+//         list.push('<td>');
+//         list.push(data[i][key]);
+//         list.push('</td>');
+//       }
+//       list.push("</tr>");
+//     }
+//     $('tbody').eq(0).html(list.join(""));
+//     
+      //2.append();
+         for(var i = 0 ; i < data.length; i++){
+         	var $data = $("<tr><td>"+data[i]['name']+"</td><td>"+data[i]['sex']+"</td><td>"+data[i]['tel']+"</td></tr>");
+           //把创建出来的$tr追加到tbody中去.
+           $('tbody').append($data);
+         }
+    });
+  });
+</script>
